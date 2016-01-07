@@ -4,80 +4,118 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width">
-  
+
   <!-- bootstrap v4-2 css -->
   <link rel="stylesheet prefetch" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
   <!-- custom styles -->
   <link rel="stylesheet" href="stylesheets/styles.css">
   <!-- icons -->
-  <link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/64274684/bootsycollins/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- http://nagoshiashumari.github.io/Rpg-Awesome/ -->
   <link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/64274684/bootsycollins/ra/css/rpg-awesome.min.css">
-  <link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/64274684/bootsycollins/rpg-icons/style.css">
-  
+
   <title>Bootsy Collins character creator</title>
-  <!--[if lt IE 9]>
-  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
 </head>
 
 <body>
 
   <div class="container m-t-1">
-    <h1>Bootsy Collins Character Creator</h1>
-    <section id="attributes" class="row">
-      <div class="col-sm-12">
+    <h1 class="display-4 m-b-2">Bootsy Collins Character Creator</h1>
+
+    <section class="row">
+
+      <article class="col-sm-6">
         <div class="card">
           <h3 class="card-header">
-            Attributes <small>(<span class="points-left"></span> of 17 points left)</small>
+            Condition
           </h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <h4 class="card-title">Hitpoints<small>(HP)</small>: <span class="label label-primary">15</span></h4>
+              <p>Your starting HP is equal to Strength &times; Will, plus 4.</p>
+            </li>
+            <li class="list-group-item">
+              <h4 class="card-title">Essence <small>(MP)</small>: <span class="label label-info">15</span></h4>
+              <p>Your starting MP is equal to Strength &times; Will, plus 4.</p>
+            </li>
+          </ul>
+        </div>
+      </article>
 
-          <div class="card-block">
-            <h3><i class="ra ra-player-dodge"></i> Dexterity <span class="label label-primary">1</span>
-              <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-sm btn-secondary">-1</button>
-                <button type="button" class="btn btn-sm btn-secondary">+1</button>
+      <article class="col-sm-6">
+        <div class="card">
+          <h3 class="card-header">
+            School of Magic
+          </h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="btn-group btn-group-lg">
+                <button class="btn btn-primary active">Jiago</button>
+                <button class="btn btn-secondary-outline">Osu</button>
               </div>
-            </h3>
-
-            <p class="font-italic">Helps you with accuracy, coordination, movement, and percision. </p>
-            <p class="m-a-0">Dexterity synergies:</p>
-            <ul class="list-inline">
-              <b>Skills</b>
-              <li class="list-inline-item label label-default">Acrobatics</li>
-              <li class="list-inline-item label label-default">Block</li>
-              <li class="list-inline-item label label-default">Brawling</li>
-              <li class="list-inline-item label label-default">Climbing</li>
-              <li class="list-inline-item label label-default">Craft</li>
-              <li class="list-inline-item label label-default">Dodge</li>
-              <li class="list-inline-item label label-default">Escape Artist</li>
-              <li class="list-inline-item label label-default">Lock Picking</li>
-              <li class="list-inline-item label label-default">Martial Arts</li>
-              <li class="list-inline-item label label-default">Pick-pocket</li>
-              <li class="list-inline-item label label-default">Piloting</li>
-              <li class="list-inline-item label label-default">Sleight of Hand</li>
-              <li class="list-inline-item label label-default">Stealth</li>
-              <li class="list-inline-item label label-default">Traps</li>
-              <li class="list-inline-item label label-default">Throw</li>
-              <li class="list-inline-item label label-default">Use Rope</li>
+              <li class="list-group-item">
+                <h4 class="card-title">
+                  Jaigo <small>intelligence</small>
+                </h4>
+                <p>Jaigo is a spell system based on disruption. The form of Jaigo that the Ventril ships uses is very different from what is seen by Dresilo or human practitioners.  Ventril ships use a central energy source to power huge death beams. Intelligence raises the Jaigo essence pool. If performed through an instrument, it is a very staccato, syncopated style.</p>
+              </li>
+              <li class="list-group-item">
+                <h4 class="card-title">
+                  Osu <small>willpower</small>
+                </h4>
+                <p>Osu magic is deeply involved in fluid reaction, and manipulation.  It can tamper with emotions, or even physics. It is much slower than Jaigo, but appears more elegant. This applies to the musical catalyst as well. Not much is known about its origins. Many assume that the Kartars developed it in a forgotten age. The Murians have also shown a great predilection for the art, using it more forcefully than Earthlings or Kartars. Your effective Osu essence pool receives a bonus from willpower. However, because of the relative slowness of Osu magic, it is possible to be interrupted.</p>
+              </li>
             </ul>
           </div>
+        </article>
 
-          <p>
-            <i class="fa fa-heart"></i> HP: <span id="hit-points"></span>
-          </p>
-          <div class="input select">
-            <select name="magic-school" id="magic-school">
-              <option value="intelligence">Jaigo (Int)</option>
-              <option value="willpower">Osu (Wil)</option>
-            </select>
-          </div>
-          <p>
-            <i class="fa fa-bolt"></i> Essence: <span id="essence"></span>
-          </p>
-        </div>
+        <article class="col-sm-12">
+          <div class="card">
+            <h3 class="card-header">
+              Attributes <small>(<span class="points-left"></span> of 17 points left)</small>
+            </h3>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h4 class="card-title">
+                  <i class="ra ra-player-dodge"></i> Dexterity <span class="label label-primary">1</span>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-sm btn-secondary">
+                      <i class="fa fa-minus-square fa-lg"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-secondary">
+                      <i class="fa fa-plus-square fa-lg"></i>
+                    </button>
+                  </div>
+                </h4>
+                <p class="font-italic p-b-1">Dex helps you with accuracy, coordination, movement, and percision.</p>
+                <ul class="list-inline">
+                  <b>Skill Synergies</b>
+                  <li class="list-inline-item label label-default">Acrobatics</li>
+                  <li class="list-inline-item label label-default">Block</li>
+                  <li class="list-inline-item label label-default">Brawling</li>
+                  <li class="list-inline-item label label-default">Climbing</li>
+                  <li class="list-inline-item label label-default">Craft</li>
+                  <li class="list-inline-item label label-default">Dodge</li>
+                  <li class="list-inline-item label label-default">Escape Artist</li>
+                  <li class="list-inline-item label label-default">Lock Picking</li>
+                  <li class="list-inline-item label label-default">Martial Arts</li>
+                  <li class="list-inline-item label label-default">Pick-pocket</li>
+                  <li class="list-inline-item label label-default">Piloting</li>
+                  <li class="list-inline-item label label-default">Sleight of Hand</li>
+                  <li class="list-inline-item label label-default">Stealth</li>
+                  <li class="list-inline-item label label-default">Traps</li>
+                  <li class="list-inline-item label label-default">Throw</li>
+                  <li class="list-inline-item label label-default">Use Rope</li>
+                </ul>
+                <li class="list-group-item">
+                  <h4 class="card-title">other stuff</h4>
+                </li>
+              </ul>
+            </div>
+          </article>
+          
+        </section>
       </div>
-    </section>
-  </div>
 
-</body>
-</html>
+    </body>
+    </html>
